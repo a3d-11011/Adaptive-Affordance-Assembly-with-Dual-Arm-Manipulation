@@ -1,0 +1,15 @@
+I will provide you with four RGB images from the front, back, left, and right perspectives of a robotic workspace.
+
+The scene shows a human hand (simulated by another robot) and a robot arm working together to assemble a {object_name}.
+
+The current task is to {task_specific_description}
+
+Your goal is to identify the single best point for the robot arm to interact with to successfully assist the human hand. You should analyze all four images for context, but your final output coordinate must be based on the **front-view image**.
+
+Provide me with the optimal interaction point as precisely as possible. This should be the coordinates of a single pixel in the **front-view** image. The point you select must be physically on the target object and represent a stable, effective location for the robot's gripper to apply force or grasp.
+
+After mentally selecting a point, double-check if it fulfills the task's requirement. If not, find a new point.
+
+You must only return the precise pixel coordinates. No other text or explanation is needed.
+
+For example: (412, 351)

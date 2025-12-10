@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot name="wheel_base">
+    <link name="wheel_base">
+        <visual>
+            <geometry>
+                <mesh filename="../mesh/wheel/wheel_base.obj" scale="1 1 1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="../mesh/wheel/wheel_base.obj" scale="1 1 1"/>
+            </geometry>
+            <sdf resolution="512"/>
+        </collision>
+    </link>
+</robot>

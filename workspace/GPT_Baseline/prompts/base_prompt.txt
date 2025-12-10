@@ -1,0 +1,15 @@
+You will receive four RGB images showing a robotic workspace from the front, back, left, and right perspectives, in that order. The scene depicts a human hand (simulated by another robot) and a robot arm working together to assemble a {object_name}. The current task is to {task_specific_description}.
+
+First, you must identify the precise location and boundaries of the target object in each image—remember it typically has a color that contrasts strongly with the background and is usually near the center of the frame. Once you have localized the object, choose the single best interaction point on its surface.
+
+Your goal is to identify the single best point for the robot arm to interact with to successfully assist the human hand. Analyze all four images for full context, but your final output must be a three-element tuple indicating:
+1. Which image (use 0 for front, 1 for back, 2 for left, 3 for right)
+2. The row index (pixel row)  
+3. The column index (pixel column)
+
+
+The chosen point must lie on the target object and represent a stable, effective location for the robot’s gripper to apply force or grasp. Double-check that your selected point truly fulfills the task’s requirements before answering.
+
+You must return **only** the 3-tuple. No additional text or explanation.
+
+For example:(0, 412, 351)

@@ -1,0 +1,1 @@
+pick up the object collaboratively. The human hand is already grasping one side of the {object_name}. The robot arm needs to find a stable grasping point on the **opposite side** of the object. This will ensure the object is lifted in a balanced and level manner.

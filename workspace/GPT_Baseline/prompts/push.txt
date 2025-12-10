@@ -1,0 +1,1 @@
+assist with a pushing task. The human hand is pushing a component (e.g., a drawer) into the main structure of the {object_name}. To complete this, the robot arm must stabilize the main structure to prevent it from sliding away. Identify the best point on the main structure for the robot to brace against the pushing force.

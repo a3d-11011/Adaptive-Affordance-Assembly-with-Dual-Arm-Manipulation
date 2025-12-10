@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot name="drawer_DrawerHandle_GX0035_top">
+    <link name="drawer_DrawerHandle_GX0035_top">
+        <visual>
+            <geometry>
+                <mesh filename="../../mesh/drawer/drawer_DrawerHandle_GX0035/drawer_container_top.obj" scale="1 1 1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="../../mesh/drawer/drawer_DrawerHandle_GX0035/drawer_container_top.obj" scale="1 1 1"/>
+            </geometry>
+            <sdf resolution="512"/>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,1 @@
+assist with a screwing task. The human hand is actively screwing a part (e.g., a leg) into the main body of the {object_name}. To prevent the main body from rotating, the robot arm needs to apply counter-pressure by firmly holding or bracing the main body. Identify the best point on the main body for the robot to press against to provide this stability.
