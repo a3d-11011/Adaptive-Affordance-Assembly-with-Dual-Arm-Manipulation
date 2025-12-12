@@ -426,7 +426,7 @@ def collect_data(task_config):
 
 if __name__ == "__main__":
     argparse = argparse.ArgumentParser()
-    argparse.add_argument("--task", type=str, default="drawer_top_1", help="task name")
+    argparse.add_argument("--task", type=str, default="desk", help="task name")
     args = argparse.parse_args()
     # lamp|square_table|desk|drawer|cabinet|round_table|stool|chair|one_leg
     task_name = args.task

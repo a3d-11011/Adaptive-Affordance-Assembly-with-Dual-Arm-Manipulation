@@ -25,7 +25,8 @@
 
 
 
-## 📖 Usage
+## Setup
+
 The A3D's simulation environment is built as a modified version of [Furniture-Bench](https://github.com/clvrai/furniture-bench).
 All required modifications to Furniture-Bench are already included in this repository.
 Therefore, there is no need to install Furniture-Bench separately.
@@ -52,9 +53,23 @@ pip install -e python
 **3. Additional Environment Dependencies for Project**
 
 ```bash
-isaac -m pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
+
+>[!NOTE]
+>
+>If you encounter error in `gym 0.21.0` setup, please try the following command:
+>```bash
+> pip install setuptools==65.5.0 pip==21  
+> pip install wheel==0.38.0
+> pip install gym==0.21.0
+>```
+
+>[!NOTE]
+>
+>When running a furniture asset for the first time, the system may take several minutes to convert the corresponding 3D mesh into a Signed Distance Function (SDF).
+>The generated SDF is cached under ~/.isaacgym for subsequent runs.
 
 ## Data Collection
 
@@ -73,6 +88,8 @@ python workspace/collect_data_one_part.py --task <task name>
 ```
 
 If you want to adjust the number of interaction steps during data collection, modify the parameter in `env.set_check_t(1)`, which controls the maximum number of allowed interactions during data collection. 
+
+
 
 ## Training
 

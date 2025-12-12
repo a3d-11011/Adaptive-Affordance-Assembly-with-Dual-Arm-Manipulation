@@ -507,11 +507,6 @@ if __name__ == "__main__":
     args = argparse.parse_args()
     # lamp|square_table|desk|drawer|cabinet|round_table|stool|chair|one_leg
     task_name = args.task
-    # task_name = "lamp"
-    # task_name = "square_table"
-    # task_name = "drawer_bottom"
-    # task_name = "drawer_top"
-    # task_name = "cabinet_door_left"
     task_config = all_task_config[task_name]
 
     collect_data(task_config)

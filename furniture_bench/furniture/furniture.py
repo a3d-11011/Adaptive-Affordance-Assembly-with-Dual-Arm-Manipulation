@@ -13,7 +13,7 @@ import furniture_bench.utils.transform as T
 from furniture_bench.utils.pose import is_similar_pose
 from furniture_bench.config import config
 from furniture_bench.furniture.parts.part import Part
-from furniture_bench.utils.detection import detection_loop
+# from furniture_bench.utils.detection import detection_loop
 from furniture_bench.furniture.parts.obstacle_front import ObstacleFront
 from furniture_bench.furniture.parts.obstacle_right import ObstacleRight
 from furniture_bench.furniture.parts.obstacle_left import ObstacleLeft
@@ -198,45 +198,45 @@ class Furniture(ABC):
                 continue
             return T.pose2mat(part_pose)
 
-    def start_detection(self):
-        self.ctx = mp.get_context("spawn")
+    # def start_detection(self):
+    #     self.ctx = mp.get_context("spawn")
 
-        if self.detection_started:
-            return
+    #     if self.detection_started:
+    #         return
 
-        self.shm = self.create_shared_memory()
-        self.lock = self.ctx.Lock()
+    #     self.shm = self.create_shared_memory()
+    #     self.lock = self.ctx.Lock()
 
-        self.proc = self.ctx.Process(
-            target=detection_loop,
-            args=(
-                config,
-                self.parts,
-                self.num_parts,
-                #self.tag_size,
-                self.lock,
-                self.shm,
-            ),
-            daemon=True,
-        )
-        self.proc.start()
-        self.detection_started = True
-        self._wait_detection_start()
+    #     self.proc = self.ctx.Process(
+    #         target=detection_loop,
+    #         args=(
+    #             config,
+    #             self.parts,
+    #             self.num_parts,
+    #             #self.tag_size,
+    #             self.lock,
+    #             self.shm,
+    #         ),
+    #         daemon=True,
+    #     )
+    #     self.proc.start()
+    #     self.detection_started = True
+    #     self._wait_detection_start()
 
-    def _wait_detection_start(self):
-        max_wait = 20  # 20 seconds
-        while True:
-            start = time.time()
-            while (time.time() - start) < max_wait:
-                _, founds = self.get_parts_poses_founds()
-                if founds.any():
-                    # Heuristic to check whether the detection started. (At least one part is found.)
-                    return
-                time.sleep(0.03)
+    # def _wait_detection_start(self):
+    #     max_wait = 20  # 20 seconds
+    #     while True:
+    #         start = time.time()
+    #         while (time.time() - start) < max_wait:
+    #             _, founds = self.get_parts_poses_founds()
+    #             if founds.any():
+    #                 # Heuristic to check whether the detection started. (At least one part is found.)
+    #                 return
+    #             time.sleep(0.03)
 
-            input(
-                "Could not find any furniture parts from the cameras\n Press enter after putting the furniture in the workspace."
-            )
+    #         input(
+    #             "Could not find any furniture parts from the cameras\n Press enter after putting the furniture in the workspace."
+    #         )
 
     def get_array(
         self,
