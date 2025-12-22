@@ -37,19 +37,8 @@
 
 - **Generalizable Policy**: With the interaction-aware affordance representation, we introduce a policy architecture combining <u>Affordance Module</u>, <u>Action Proposal Module</u>, and <u>Action Scoring Module</u> to achieve cross-category generalization in assembly tasks.
 
-![](Repo_Image/FrameworkV11.png)
+![](Repo_Image/FrameworkV11.png
 
-## 📢 MileStone
-
-- [x] *(Coming Soon)* A3D **Simulation Environment** Release !
-
-- [x] *(Coming Soon)* A3D **Data Collection Pipeline** Release !
-
-- [x] *(Coming Soon)* A3D **Policy Training Code** Release !
-
-- [ ] *(Coming Soon)* A3D **Dataset** Release !
-
-- [ ] *(Coming Soon)* A3D **Real-World Deployment** Release !
 
 ## 📖 Usage
 
@@ -222,10 +211,6 @@ We sincerely thank the authors of the following open-source projects, which were
 If you find this repository useful in your research, please consider starring ⭐ this repo and citing 📑 our paper:
 
 ```bibtex
-@inproceedings{a3d2026,
-    title={A3D: Adaptive Affordance Assembly with Dual-Arm Manipulation},
-    author={Liang, Jiaqi and Chen, Yue and Yu, Qize and Shen, Yan and Zhang, Haipeng and Dong, Hao and Wu, Ruihai},
-    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-    year={2026}
+@inproceedings{
 }
 ```
