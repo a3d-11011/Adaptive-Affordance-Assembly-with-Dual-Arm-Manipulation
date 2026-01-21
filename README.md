@@ -17,7 +17,7 @@
 <br>
 
 <div align="center">
-    <a href="" target="_blank">
+    <a href="https://arxiv.org/abs/2601.11076" target="_blank">
     <img src="https://img.shields.io/badge/Paper-arXiv-green" alt="Paper arXiv"></a>
     <a href="https://a3d-11011.github.io/" target="_blank">
     <img src="https://img.shields.io/badge/Page-A3D-red" alt="Project Page"/></a>
